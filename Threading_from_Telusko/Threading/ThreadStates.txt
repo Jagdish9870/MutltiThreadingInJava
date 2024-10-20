@@ -1,0 +1,12 @@
+Thread state are mainly five  types...
+
+
+1. new state -> start()-> this method refers to runnable state
+2.Runnable state -> run()-> this method refers to running state..
+
+3.Running state -> wait() or sleep()-> this method refers to wait 
+4. Waiting state -> notify()-> this refers to runnable state..
+
+
+// every state refer to dead state when we use stop() method...
+5.Dead state
