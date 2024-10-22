@@ -10,7 +10,44 @@ terminating
 
 //thread vs runnable :
 runnable is used when one class extending another class so you have to implement runnable because java does not support multiple inheritance so you cannot extend two class at the same time 
- 
+
+locking : is the process of using synchronization . there are two types of synchronization
+1. intrinsic : built into every object in java , we don't see them and it is automatic locks.........
+2. Explicit : these are the advance locks and you can define when to lock or when to unlock
+
+
+ThreadPool:
+1. helps in resource management...
+2. helps in increasing response time
+3. control over resource count
+4. helps in reducing memory usage
+
+Executors framework :
+ introduced in java 5 and part of java.util.concurrent package and used in industries because bu using this ,dev don,t have to manage thread manually
+ there are three core interfaces
+ 1. Executor
+ 2. ExecutorService
+ 3. ScheduledExecutorService
+
+1. helps in creating and managing threads
+2. helps in executing tasks asynchronously
+3. helps in executing tasks concurrently
+4. helps in executing tasks in a thread pool
+5. helps in executing tasks in a scheduled thread pool
+6. helps in thread reuse and error handling
+
+
+Runnable vs callable:
+
+1. runnable is used when you don't want to return anything 
+   callable is used when you want to return something
+
+2. runnable used run() functionality
+    callable used call() functionality
+
+3.runnable does not throw exception
+  callable throws exception
+
 
 
 
