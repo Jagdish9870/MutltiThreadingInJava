@@ -27,7 +27,7 @@ Executors framework :
  there are three core interfaces
  1. Executor
  2. ExecutorService
- 3. ScheduledExecutorService
+ 3. ScheduledExecutorService :- used when you want to perform some tasks on any interval
 
 1. helps in creating and managing threads
 2. helps in executing tasks asynchronously
