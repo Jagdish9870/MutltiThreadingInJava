@@ -15,9 +15,9 @@ public class DaemonThread extends Thread {
         }
     }
     public static void main(String[] args) throws InterruptedException {
-        DaemonThread in= new DaemonThread("harsh");
-            in.setDaemon(true);
-        in.start();
+        DaemonThread dthread= new DaemonThread("harsh");
+            dthread.setDaemon(true);
+        dthread.start();
         System.out.println("main done");
         
      

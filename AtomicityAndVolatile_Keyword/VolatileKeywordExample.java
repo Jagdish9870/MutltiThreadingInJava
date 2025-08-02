@@ -16,7 +16,7 @@ class SharedObj {
     }
 }
 
-public class VolatileKaywordExample {
+public class VolatileKeywordExample {
     public static void main(String[] args) {
         SharedObj sharedObj = new SharedObj();
 

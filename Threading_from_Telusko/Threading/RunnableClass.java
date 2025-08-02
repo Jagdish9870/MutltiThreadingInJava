@@ -30,7 +30,7 @@ class U implements Runnable{
 
 public class RunnableClass {
     public static void main(String[] args) {
-        Runnable r= new T();
+        T r= new T(); 
         Runnable r1= new U();
 
         Thread t1= new Thread(r);

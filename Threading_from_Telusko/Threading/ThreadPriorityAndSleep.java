@@ -2,7 +2,7 @@ package Threading_from_Telusko.Threading;
 class First extends Thread
 {
     public void run(){
-        for(int i=0; i<=100;i++){
+        for(int i=0; i<=10;i++){
 
             System.out.println("har har mahadev");
             
@@ -19,7 +19,7 @@ class First extends Thread
 class Second extends Thread
 {
     public void run(){
-         for(int j=0; j<=100;j++){
+         for(int j=0; j<=10;j++){
 
             
             System.out.println("jai shree ram");
@@ -34,16 +34,19 @@ class Second extends Thread
     }
 }
 public class ThreadPriorityAndSleep {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         First a = new First(); 
         Second b =new Second();
-        //System.out.println(a.getPriority());
+        System.out.println(a.getPriority());
        // b.setPriority(Thread.MAX_PRIORITY);   // basically priority goes 1-10 , (min -high)
 
 
         a.start();  
         
         b.start();
+        a.join();
+        b.join();
+        
 
     }
     

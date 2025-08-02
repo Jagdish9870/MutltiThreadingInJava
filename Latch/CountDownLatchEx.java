@@ -5,20 +5,6 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class CountDownLatchEx {
-    public static void main(String[] args) throws InterruptedException {
-        int n = 3;
-        ExecutorService executorService = Executors.newFixedThreadPool(n);
-        CountDownLatch latch = new CountDownLatch(n);
-        executorService.submit(new DependentService(latch));
-        executorService.submit(new DependentService(latch));
-        executorService.submit(new DependentService(latch));
-        latch.await();
-        System.out.println("Main");
-        executorService.shutdown();
-    }
-}
-
 class DependentService implements Callable<String> {
     private final CountDownLatch latch;
     public DependentService(CountDownLatch latch) {
@@ -34,4 +20,19 @@ class DependentService implements Callable<String> {
         }
         return "ok";
     }
+}  
+
+public class CountDownLatchEx {
+    public static void main(String[] args) throws InterruptedException {
+        int n = 3;
+        CountDownLatch latch = new CountDownLatch(n);
+        ExecutorService executorService = Executors.newFixedThreadPool(n);
+        executorService.submit(new DependentService(latch));
+        executorService.submit(new DependentService(latch));
+        executorService.submit(new DependentService(latch));
+        latch.await();
+        System.out.println("Main");
+        executorService.shutdown();
+    }
 }
+

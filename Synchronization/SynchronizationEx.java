@@ -1,18 +1,6 @@
 package Synchronization;
 
-class MyThread extends Thread{
 
-    private Counter counter;  //object of Counter class type
-    public MyThread(Counter counter){
-        this.counter=counter;
-    }
-
-    public void run(){
-        for(int i=0;i<1000;i++){
-            counter.increment();
-        }
-    }
-}
 class Counter {
 
    private int count=0;
@@ -29,6 +17,19 @@ class Counter {
             return count;
         }
 
+}
+class MyThread extends Thread{
+
+    private Counter counter;  //object of Counter class type
+    public MyThread(Counter counter){
+        this.counter=counter;
+    }
+
+    public void run(){
+        for(int i=0;i<1000;i++){
+            counter.increment();
+        }
+    }
 }
 public class SynchronizationEx {
     public static void main(String[] args) {

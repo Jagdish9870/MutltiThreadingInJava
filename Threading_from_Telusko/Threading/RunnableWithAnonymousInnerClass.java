@@ -30,7 +30,7 @@ package Threading_from_Telusko.Threading;
 
 public class RunnableWithAnonymousInnerClass {
     public static void main(String[] args) {
-        Runnable r= new Runnable(){   // known as  annonymous inner class
+        Runnable r= new Runnable(){   // known as  anonymous inner class
              public void run(){
         for(int i=0;i<5;i++){
             System.out.println("hii");
@@ -45,7 +45,7 @@ public class RunnableWithAnonymousInnerClass {
 
         };
 
-    Runnable r1= new Runnable() {          //annonymous inner class......
+    Runnable r1= new Runnable() {          //anonymous inner class......
              public void run(){
         for(int j=0;j<5;j++){
             System.out.println("hello");
